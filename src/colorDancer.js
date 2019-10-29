@@ -14,5 +14,8 @@ makeColorDancer.prototype.step = function() {
 
 makeColorDancer.prototype.change = function() {
   var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-  this.$node.css({ borderColor: randomColor }, 'slow');
+
+  this.$node.addClass('colorer');
+  this.$node.css({ borderColor: randomColor },
+    Math.random() * 5000);
 };

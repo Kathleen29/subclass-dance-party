@@ -1,6 +1,5 @@
 var makeMovingDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  //this.$node = $('<span class="mover"></span>');
 };
 
 makeMovingDancer.prototype = Object.create(makeDancer.prototype);
@@ -15,10 +14,16 @@ makeMovingDancer.prototype.step = function() {
 makeMovingDancer.prototype.move = function() {
   var newTop = $('body').height() * Math.random();
   var newLeft = $('body').width() * Math.random();
+  var newSize = Math.floor(15 * Math.random() + 2).toString() + 'px solid';
+  var newOpacity = Math.random() * 1;
+
+  this.$node.addClass('mover');
   this.$node.animate({
     top: newTop,
     left: newLeft,
+    opacity: newOpacity,
   },
   Math.random() * 5000);
-
+  console.log(newSize);
+  // this.$node.css('border', newSize);
 };

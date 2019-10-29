@@ -4,10 +4,12 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  text-decoration: none;
 }
 .title, .addDancerButton{
   padding:5px 12px;
@@ -21,20 +23,22 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  border: 12px dotted;
+  border-color: #f1bd5c;
+  border-radius: 6px;
   position:absolute;
 }
 
 .mover{
-  border:10px solid green;
-  border-radius:10px;
+  border: 8px solid;
+  border-color: #16f184;
+  border-radius:15px;
+  opacity: 1;
   position:absolute;
 }
 
 .colorer{
-  border:10px solid;
-  border-color: #69f588;
-  border-radius:10px;
+  border:26px solid;
+  border-radius: 28px;
   position:absolute;
 }
