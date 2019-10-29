@@ -1,6 +1,6 @@
 var makeColorDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="colorer"></span>');
+  //this.$node = $('<span class="colorer"></span>');
 };
 
 makeColorDancer.prototype = Object.create(makeDancer.prototype);

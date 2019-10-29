@@ -1,6 +1,6 @@
 var makeMovingDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="mover"></span>');
+  //this.$node = $('<span class="mover"></span>');
 };
 
 makeMovingDancer.prototype = Object.create(makeDancer.prototype);
@@ -17,7 +17,8 @@ makeMovingDancer.prototype.move = function() {
   var newLeft = $('body').width() * Math.random();
   this.$node.animate({
     top: newTop,
-    left: newLeft
+    left: newLeft,
   },
   Math.random() * 5000);
+
 };
