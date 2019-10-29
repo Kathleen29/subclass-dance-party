@@ -25,3 +25,16 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.mover{
+  border:10px solid green;
+  border-radius:10px;
+  position:absolute;
+}
+
+.colorer{
+  border:10px solid;
+  border-color: #69f588;
+  border-radius:10px;
+  position:absolute;
+}
