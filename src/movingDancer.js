@@ -18,12 +18,24 @@ makeMovingDancer.prototype.move = function() {
   var newOpacity = Math.random() * 1;
 
   this.$node.addClass('mover');
+  this.$node.css({
+    top: newTop,
+    left: newLeft,
+    opacity: 0,
+  },
+  Math.random() * 5000);
   this.$node.animate({
     top: newTop,
     left: newLeft,
     opacity: newOpacity,
   },
   Math.random() * 5000);
-  console.log(newSize);
   // this.$node.css('border', newSize);
+};
+
+makeMovingDancer.prototype.lineUp = function(x) {
+  this.$node.css({
+    top: $('body').height() / 2,
+    left: x,
+  });
 };

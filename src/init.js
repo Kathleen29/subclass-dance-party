@@ -29,6 +29,23 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+
+
+  $('.lineUpButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      var xPos = i * 50;
+      window.dancers[i].lineUp(xPos);
+    }
+  });
+
+  $('span').on('mouseenter', function(event) {
+    console.log('hi');
+    $(this).animate({
+      border: '50px solid',
+    });
+  });
+
 });
 

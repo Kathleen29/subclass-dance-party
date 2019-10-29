@@ -19,3 +19,10 @@ makeColorDancer.prototype.change = function() {
   this.$node.css({ borderColor: randomColor },
     Math.random() * 5000);
 };
+
+makeColorDancer.prototype.lineUp = function(x) {
+  this.$node.css({
+    top: $('body').height() / 2,
+    left: x,
+  });
+};

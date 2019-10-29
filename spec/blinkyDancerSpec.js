@@ -12,10 +12,12 @@ describe('blinkyDancer', function() {
     expect(blinkyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(blinkyDancer.$node, 'toggle');
+  it('should have a step function that makes its node fade', function() {
+    sinon.spy(blinkyDancer.$node, 'fadeIn');
+    sinon.spy(blinkyDancer.$node, 'fadeOut');
     blinkyDancer.step();
-    expect(blinkyDancer.$node.toggle.called).to.be.true;
+    expect(blinkyDancer.$node.fadeIn.called).to.be.true;
+    expect(blinkyDancer.$node.fadeOut.called).to.be.true;
   });
 
   describe('dance', function() {
