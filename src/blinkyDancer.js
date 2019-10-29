@@ -8,7 +8,6 @@ makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 makeBlinkyDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
-  this.$node.attr('id', 'test');
   this.$node.fadeIn();
   this.$node.fadeOut();
 };

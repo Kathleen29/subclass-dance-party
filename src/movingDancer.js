@@ -18,12 +18,12 @@ makeMovingDancer.prototype.move = function() {
   var newOpacity = Math.random() * 1;
 
   this.$node.addClass('mover');
-  this.$node.css({
-    top: newTop,
-    left: newLeft,
-    opacity: 0,
-  },
-  Math.random() * 5000);
+  // this.$node.css({
+  //   top: newTop,
+  //   left: newLeft,
+  //   opacity: 0,
+  // },
+  // Math.random() * 5000);
   this.$node.animate({
     top: newTop,
     left: newLeft,
