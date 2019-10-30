@@ -3,37 +3,34 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background: rgb(1,75,164);
+  background: radial-gradient(circle, rgba(1,75,164,1) 0%, rgba(4,6,23,1) 80%);
   font-size: 16px;
   font-family: Helvetica, sans-serif;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: #93bfe7;
   text-decoration: none;
 }
 .title, .addDancerButton{
   padding: 8px 12px;
   float:right;
 }
-.lineUpButton{
+.lineUpButton, .disperseButton{
   padding: 8px 12px;
   float:left;
 }
 .topbar{
   height:34px;
-  background-color: #555;
+  background-color: rgb(15, 31, 46);
 }
 .title{
-  background-color: #777;
+  background-color: rgb(15, 31, 46);
 }
 .dancer{
-  border: 12px solid;
-  border-color: #f1bd5c;
-  border-radius: 6px;
-  position:absolute;
 }
 .blinker{
-  border: 12px solid;
+  border: 16px solid;
   border-color: #f1bd5c;
   border-radius: 6px;
   position:absolute;

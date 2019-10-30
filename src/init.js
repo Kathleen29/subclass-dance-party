@@ -31,7 +31,6 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
 
-
     $('.colorer').on('mouseenter', function(event) {
       var color = this.style.borderColor;
       $('.blinker').css({
@@ -49,20 +48,7 @@ $(document).ready(function() {
       });
     });
 
-    // $(dancer.$node).on('mouseenter', function(event) {
-    //   $(dancer.$node).animate({
-    //     zoom: 1.5,
-    //   });
-    // });
-
-    // $(dancer.$node).on('mouseleave', function(event) {
-    //   $(dancer.$node).animate({
-    //     // border: '50px solid',
-    //     zoom: 1,
-    //   });
-    // });
   });
-
 
   $('.lineUpButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
@@ -71,6 +57,13 @@ $(document).ready(function() {
     }
   });
 
-
+  $('.disperseButton').on('click', function(event) {
+    var newTop, newLeft;
+    for (var i = 0; i < window.dancers.length; i++) {
+      newTop = $('body').height() * Math.random();
+      newLeft = $('body').width() * Math.random();
+      window.dancers[i].setPosition(newTop, newLeft);
+    }
+  });
 });
 

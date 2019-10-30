@@ -1,5 +1,6 @@
 var makeMovingDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.linedUp = false;
 };
 
 makeMovingDancer.prototype = Object.create(makeDancer.prototype);
@@ -18,22 +19,22 @@ makeMovingDancer.prototype.move = function() {
   var newOpacity = Math.random() * 1;
 
   this.$node.addClass('mover');
-  // this.$node.css({
-  //   top: newTop,
-  //   left: newLeft,
-  //   opacity: 0,
-  // },
-  // Math.random() * 5000);
-  this.$node.animate({
-    top: newTop,
-    left: newLeft,
-    opacity: newOpacity,
-  },
-  Math.random() * 5000);
-  // this.$node.css('border', newSize);
+  if (!this.linedUp) {
+    this.$node.animate({
+      top: newTop,
+      left: newLeft,
+      opacity: newOpacity,
+    },
+    Math.random() * 5000);
+
+  }
+  if (this.linedUp) {
+    console.log('register change');
+  }
 };
 
 makeMovingDancer.prototype.lineUp = function(x) {
+  this.linedUp = true;
   this.$node.css({
     top: $('body').height() / 2,
     left: x,
