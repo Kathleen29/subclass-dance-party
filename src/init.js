@@ -30,6 +30,37 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+
+
+    $('.colorer').on('mouseenter', function(event) {
+      var color = this.style.borderColor;
+      $('.blinker').css({
+        borderColor: color,
+      });
+      $('.mover').css({
+        borderColor: color,
+      });
+    });
+
+    $('.colorer').on('mouseleave', function(event) {
+      $('.mover').css({
+        // border: '50px solid',
+        zoom: 1,
+      });
+    });
+
+    // $(dancer.$node).on('mouseenter', function(event) {
+    //   $(dancer.$node).animate({
+    //     zoom: 1.5,
+    //   });
+    // });
+
+    // $(dancer.$node).on('mouseleave', function(event) {
+    //   $(dancer.$node).animate({
+    //     // border: '50px solid',
+    //     zoom: 1,
+    //   });
+    // });
   });
 
 
@@ -40,12 +71,6 @@ $(document).ready(function() {
     }
   });
 
-  $('span').on('mouseenter', function(event) {
-    console.log('hi');
-    $(this).animate({
-      border: '50px solid',
-    });
-  });
 
 });
 

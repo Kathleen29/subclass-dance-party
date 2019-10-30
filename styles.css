@@ -32,6 +32,12 @@ body, a:link, a:visited, a:active{
   border-radius: 6px;
   position:absolute;
 }
+.blinker{
+  border: 12px solid;
+  border-color: #f1bd5c;
+  border-radius: 6px;
+  position:absolute;
+}
 .mover{
   border: 8px solid;
   border-color: #16f184;
